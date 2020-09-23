@@ -7,8 +7,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <h1>This is PhotoZ app</h1>
-        <Route exact path="/signin" component={SignInPage}/>
+        <Route exact path="/" component={SignInPage}/>
       </div>
     </Router>
   );
