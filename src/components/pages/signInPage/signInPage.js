@@ -23,7 +23,7 @@ function SignInPage(props) {
                 <Link>Forgot password</Link>
                 <Button color="primary">Sign in</Button>
             </Form>
-            <Link className="signup" color="text-primary">Sign up</Link>
+            <Link to="/signup" className="signup" color="text-primary">Sign up</Link>
         </div>
     )
 }
