@@ -1,8 +1,33 @@
 import React from 'react';
+import {Button, Form, FormGroup, Input, Label} from 'reactstrap';
+import {Link} from 'react-router-dom';
 
-function SignUpPage() {
+import './signUpPage.scss';
+
+function SignUpPage(props) {
     return (
-        <h1>This is sign up page</h1>
+        <div>
+            <img src="img/AppIcon.svg" alt="App icon" />
+            <div className="title">PhotoZ</div>
+            <Form className="form">
+                <Label className="sign_up">Sign up</Label>
+                <FormGroup className="form_group">
+                    <Label for="exampleUsername">Username</Label>
+                    <Input type="text"></Input>
+                </FormGroup>
+                <FormGroup className="form_group">
+                    <Label for="exampleEmail">Email</Label>
+                    <Input type="email"></Input>
+                </FormGroup>
+                <FormGroup className="form_group">
+                    <Label for="examplePassword">Password</Label>
+                    <Input type="password"></Input>
+                </FormGroup>
+
+                <Button className="sign_up_button" color="primary">Sign up</Button>
+            </Form>
+            <Link to="/signin" className="signin" color="text-primary">Sign in</Link>
+        </div>
     )
 }
 

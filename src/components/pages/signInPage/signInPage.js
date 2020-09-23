@@ -9,7 +9,7 @@ function SignInPage(props) {
         <div>
             <img src="img/AppIcon.svg" alt="App icon" />
             <div className="title">PhotoZ</div>
-            <Form className="form">
+            <Form className="signin_form">
                 <Label className="sign_in">Sign in</Label>
                 <FormGroup className="form_group">
                     <Label for="exampleEmail">Email</Label>
@@ -21,7 +21,7 @@ function SignInPage(props) {
                 </FormGroup>
 
                 <Link>Forgot password</Link>
-                <Button color="primary">Sign in</Button>
+                <Button className="sign_in_button" color="primary">Sign in</Button>
             </Form>
             <Link to="/signup" className="signup" color="text-primary">Sign up</Link>
         </div>
