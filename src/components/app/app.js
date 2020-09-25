@@ -9,10 +9,12 @@ function App() {
   return (
     <Router>
       <div className="App">
-        {/* <Route path="/" component={SignInPage}/> */}
+        <Route path="/" component={SignInPage}/>
         <Route exact path="/signinerror" component={SignInErrorPage}/>
         <Route exact path="/signin" component={SignInPage}/>
         <Route exact path="/signup" component={SignUpPage}/>
+
+        
       </div>
     </Router>
   );
