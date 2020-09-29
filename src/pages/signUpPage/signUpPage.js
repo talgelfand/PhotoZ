@@ -3,9 +3,9 @@ import {Link} from 'react-router-dom';
 import SignUpForm from '../../components/forms/signUpForm';
 import Logo from '../../components/logo';
 
-import '../../styles/signUpPage.scss';
+import './signUpPage.scss';
 
-function SignUpPage(props) {
+function SignUpPage() {
     return (
         <div>
             <Logo/>

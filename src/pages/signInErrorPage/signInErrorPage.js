@@ -2,7 +2,7 @@ import React from 'react';
 import SignInErrorForm from '../../components/forms/signInErrorForm';
 import Logo from '../../components/logo';
 
-import '../../styles/signInErrorPage.scss';
+import './signInErrorPage.scss';
 
 function SignInErrorPage() {
     return (

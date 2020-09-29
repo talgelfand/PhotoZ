@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import SignInForm from '../../components/forms/signInForm';
 import Logo from '../../components/logo';
 
-import '../../styles/signInPage.scss';
+import './signInPage.scss';
 
 function SignInPage() {
     return (

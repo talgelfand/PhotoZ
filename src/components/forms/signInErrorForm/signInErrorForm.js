@@ -2,7 +2,7 @@ import React from 'react';
 import {Button, Form, FormGroup, Input, Label, Alert} from 'reactstrap';
 import {Link} from 'react-router-dom';
 
-import '../../../styles/signInForm.scss';
+import '../signInForm/signInForm.scss';
 
 function SignInErrorForm() {
     return (
