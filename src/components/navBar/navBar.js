@@ -6,6 +6,16 @@ import './navbar.scss';
 
 export default class NavBar extends Component {
 
+    state = {
+        dropdownOpen: false
+    }
+
+    toggleDropdown = () => {
+        this.setState(prevState => ({
+            dropdownOpen: !prevState.dropdownOpen
+        }));
+    }
+
     render() {
         return (
             <Navbar className="navbar" color="primary">
@@ -15,13 +25,13 @@ export default class NavBar extends Component {
                 </div>
                 <div className="navbar__right_wrapper">
                     <Button className="navbar__button">Create new post</Button>
-                    <Dropdown className="navbar__dropdown" toggle={this.toggleMenu}>
+                    <Dropdown className="navbar__dropdown" isOpen={this.state.dropdownOpen} toggle={this.toggleDropdown}>
                         <DropdownToggle caret className="navbar__dropdown">
                             John Doe
                         </DropdownToggle>
                         <DropdownMenu>
                             <DropdownItem>
-                                <Link to="/">Sign out</Link>
+                                <Link to="#">Sign out</Link>
                             </DropdownItem>
                         </DropdownMenu>
                     </Dropdown>
