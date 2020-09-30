@@ -7,7 +7,7 @@ function PostList() {
             caption="The butterfly"
             img="img/butterfly.svg"
             user="JD"
-            comment=""Nice picture
+            comment="Nice picture"
         />
     )
 }

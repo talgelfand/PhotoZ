@@ -9,14 +9,12 @@ function Post({caption, img, user, comment}) {
             <p className="post__caption">{caption}</p>
             <img className="post__img" src={img} alt={caption}/>
             <div className="post__wrapper">
-                <div className="post__user">
-                    <p>{user}</p>
-                </div>
+                <div className="post__user">{user}</div>
                 <div className="post__comment">{comment}</div>
             </div>
-            <InputGroup>
-                <Input placeholder="Write a comment..."/>
-                <Button color="primary">Submit</Button>
+            <InputGroup className="post__input_group">
+                <Input className="post__input" placeholder="Write a comment..."/>
+                <Button className="post__button" color="primary">Submit</Button>
             </InputGroup>
         </div>
     )

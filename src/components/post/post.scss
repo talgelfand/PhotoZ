@@ -5,4 +5,51 @@
     min-height: 748px;
     background: #FFFFFF;
     border: 1px solid #E5E5E5;
+    border-radius: 4px;
+    &__caption {
+        margin: 25px;
+        font-weight: 500;
+        font-size: 18px;
+        background: #FFFFFF;
+    }
+    &__img {
+        margin: 0;
+        height: 537px;
+    }
+    &__wrapper {
+        margin-top: 21px;
+        display: flex;
+        flex-direction: row;
+        background-color: #FFFFFF;
+    }
+    &__user {
+        margin: 0px 13px 20px 25px;
+        padding: 7px 9px 7px 10px;
+        width: 38px;
+        height: 38px;
+        border-radius: 100%;
+        background: #2D9CDB;
+        color: #FFFFFF;
+    }
+    &__comment {
+        padding: 8px 16px 10px 16px ;
+        width: 127px;
+        height: 38px;
+        background: #F2F2F2;
+        border-radius: 4px;
+        font-size: 16px;
+        line-height: 24px;
+        color: #000000;
+    }
+    &__input_group {
+        margin: 20px;
+        width: 910px;
+    }
+    &__input {
+        border: 1px solid #CCCCCC;
+        border-radius: 4px 0px 0px 4px;
+    }
+    &__button {
+        border-radius: 0px 4px 4px 0px;
+    }
 }
