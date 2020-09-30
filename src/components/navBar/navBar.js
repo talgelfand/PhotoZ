@@ -31,7 +31,7 @@ export default class NavBar extends Component {
                         </DropdownToggle>
                         <DropdownMenu>
                             <DropdownItem>
-                                <Link to="#">Sign out</Link>
+                                <Link to="/signin">Sign out</Link>
                             </DropdownItem>
                         </DropdownMenu>
                     </Dropdown>
