@@ -1,7 +1,7 @@
 import React from 'react';
 import NavBar from '../../components/navBar';
 import PostList from '../../components/postList';
-import Modal from '../../components/modal';
+import ModalWindow from '../../components/modal';
 
 import './mainPage.scss';
 
@@ -10,7 +10,7 @@ function MainPage() {
         <div className="main">
             <NavBar/>
             <PostList/>
-            <Modal/>
+            <ModalWindow/>
         </div>
     )
 }

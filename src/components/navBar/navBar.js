@@ -24,7 +24,7 @@ export default class NavBar extends Component {
                     <NavbarText className="navbar__title">PhotoZ</NavbarText>
                 </div>
                 <div className="navbar__right_wrapper">
-                    <Button className="navbar__button">Create new post</Button>
+                    <Button onClick={this.toggleModal} className="navbar__button">Create new post</Button>
                     <Dropdown className="navbar__dropdown" isOpen={this.state.dropdownOpen} toggle={this.toggleDropdown}>
                         <DropdownToggle caret className="navbar__dropdown">
                             John Doe
