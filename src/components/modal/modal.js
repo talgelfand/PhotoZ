@@ -6,7 +6,7 @@ import './modal.scss';
 class ModalWindow extends Component {
 
     state = {
-        opened: true
+        opened: false
     }
 
     toggleModal = () => {
