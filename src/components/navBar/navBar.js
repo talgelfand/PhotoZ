@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import {Button, Dropdown, DropdownItem, DropdownMenu, DropdownToggle, Navbar, NavbarText} from 'reactstrap';
-import ModalWindow from '../modal';
+import ModalWindow from '../modalWindow';
 
 import './navbar.scss';
 
