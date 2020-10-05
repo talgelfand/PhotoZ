@@ -34,6 +34,7 @@ export default class NavBar extends Component {
                     </div>
                     <div className="navbar__right_wrapper">
                         <Button onClick={this.toggleModal} className="navbar__button">Create new post</Button>
+                        {this.state.opened ? <ModalWindow/> : null}
                         <Dropdown className="navbar__dropdown" isOpen={this.state.dropdownOpen} toggle={this.toggleDropdown}>
                             <DropdownToggle caret className="navbar__dropdown">
                                 John Doe
@@ -46,7 +47,6 @@ export default class NavBar extends Component {
                         </Dropdown>
                     </div>
                 </Navbar>
-                <ModalWindow isOpen={this.state.opened} toggle={this.toggleModal} className="modal"></ModalWindow>
             </div>
         )
     }

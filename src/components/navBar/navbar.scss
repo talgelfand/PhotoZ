@@ -35,6 +35,10 @@
         margin-bottom: 8px;
         background: #23C6B2;
         border: none;
+        &:hover, &:focus, &:active {
+            background: #23C6B2;
+            border: none;
+        }
     }
     &__dropdown {
         margin-right: 24px;

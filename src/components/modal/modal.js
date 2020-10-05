@@ -1,23 +1,40 @@
 import React, {Component} from 'react';
-import { Button, Form, Input, InputGroup, Label, Modal } from 'reactstrap';
+import { Button, Form, Input, InputGroup, Label} from 'reactstrap';
+import Modal from 'react-modal';
 
 import './modal.scss';
 
 class ModalWindow extends Component {
 
     state = {
-        opened: false
+        modalIsOpened: true
     }
 
     toggleModal = () => {
         this.setState(prevState => ({
-            opened: !prevState.opened
+            modalIsOpened: !prevState.modalIsOpened
         }));
     }
 
     render() {
         return (
-            <Modal isOpen={this.state.opened} toggle={this.toggleModal} className="modal">
+            <Modal 
+                isOpen={this.state.modalIsOpened} 
+                onRequestClose={this.toggleModal}
+                style={
+                    {
+                        overlay: {
+                            backgroundColor: 'rgba(0, 0, 0, 0.5)'
+                        },
+                        content: {
+                            top: '50%',
+                            left: '50%',
+                            transform: 'translate(-50%, -50%)',
+
+                        }
+                    }
+                }
+                className="modal">
                 <div className="modal__wrapper">
                     <div className="modal__title">New post</div>
                     <img className="modal__close" src="img/close.svg" alt="close" onClick={this.toggleModal}/>
