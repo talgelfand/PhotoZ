@@ -23,3 +23,12 @@ Label {
     margin-top: 2px;
     margin-left: 197px;
 }
+
+.sign_in_link {
+    color: #FFFFFF;
+    text-decoration: none;
+    &:hover {
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+}

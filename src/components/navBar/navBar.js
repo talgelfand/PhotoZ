@@ -24,6 +24,10 @@ export default class NavBar extends Component {
         }));
     }
 
+    handleExiting = () => {
+        localStorage.clear();
+    }
+
     render() {
         return (
             <div>
@@ -41,7 +45,7 @@ export default class NavBar extends Component {
                             </DropdownToggle>
                             <DropdownMenu>
                                 <DropdownItem>
-                                    <Link to="/signin">Sign out</Link>
+                                    <Link to="/signin" onClick={this.handleExiting}>Sign out</Link>
                                 </DropdownItem>
                             </DropdownMenu>
                         </Dropdown>
