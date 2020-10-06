@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import {Button, Form, FormGroup, Input, Label} from 'reactstrap';
-import {Link, Redirect} from 'react-router-dom';
-import SignInErrorForm from '../signInErrorForm';
+import {Button, Form, FormGroup, Input, Label, Alert} from 'reactstrap';
+import {Link} from 'react-router-dom';
 
 import './signInForm.scss';
 
@@ -30,7 +29,6 @@ class SignInForm extends Component {
             this.setState({
                 isAuthenticated: false
             })
-            return <SignInErrorForm/>
         } 
     }
 
@@ -38,6 +36,10 @@ class SignInForm extends Component {
         return (
             <Form className="signin_form">
                     <Label className="sign_in">Sign in</Label>
+                    {(this.state.isAuthenticated || this.state.email === '' || this.state.password === '') ? 
+                        null
+                        :
+                        <Alert color="danger" fade={false}>Email or password is wrong</Alert>}
                     <FormGroup className="form_group">
                         <Label for="exampleEmail">Email</Label>
                         <Input 
@@ -56,7 +58,6 @@ class SignInForm extends Component {
                             name="password">
                         </Input>
                     </FormGroup>
-
                     <Link>Forgot password</Link>
                     <Button 
                         onClick={this.handleSaving} 
