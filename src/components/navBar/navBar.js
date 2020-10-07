@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import {Button, Dropdown, DropdownItem, DropdownMenu, DropdownToggle, Navbar, NavbarText} from 'reactstrap';
 import ModalWindow from '../modalWindow';
+import clearLocalStorage from '../../utils/clearLocalStorage';
 
 import './navbar.scss';
 
@@ -19,13 +20,9 @@ export default class NavBar extends Component {
     }
 
     toggleModal = () => {
-        this.setState(prevState => ({
-            opened: !prevState.opened
-        }));
-    }
-
-    handleExiting = () => {
-        localStorage.clear();
+        this.setState({
+            opened: !this.state.opened
+        });
     }
 
     render() {
@@ -45,7 +42,7 @@ export default class NavBar extends Component {
                             </DropdownToggle>
                             <DropdownMenu>
                                 <DropdownItem>
-                                    <Link to="/signin" onClick={this.handleExiting}>Sign out</Link>
+                                    <Link to="/signin" onClick={clearLocalStorage}>Sign out</Link>
                                 </DropdownItem>
                             </DropdownMenu>
                         </Dropdown>
