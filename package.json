@@ -10,9 +10,11 @@
     "bootstrap": "^4.5.2",
     "dotenv": "^8.2.0",
     "react": "^16.13.1",
+    "react-app-env": "^1.2.3",
     "react-axios": "^2.0.3",
     "react-dom": "^16.13.1",
     "react-modal": "^3.11.2",
+    "react-native-dotenv": "^2.4.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3"
   },
