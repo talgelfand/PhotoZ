@@ -1,1 +1,3 @@
 [0930/160434.400:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[1009/141742.756:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1009/153902.270:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\tala.gelfande\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\60adcf98-361c-4f21-bc8c-0773b53004df: The system cannot find the path specified. (0x3)

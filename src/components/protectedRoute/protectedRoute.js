@@ -1,24 +1,21 @@
-import React from 'react';
-import {Redirect, Route} from 'react-router-dom';
-import {Consumer} from '../context';
+import React, { useContext } from 'react';
+import {Route, Redirect} from 'react-router-dom';
+import {AuthContext} from '../auth';
 
 function ProtectedRoute({component: Component, ...rest}) {
 
-    const isAuthenticated = true;
-    
+    const {isAuthenticated} = useContext(AuthContext);
     return (
-        <Consumer>
-            <Route 
-                {...rest} 
-                render={props => {
-                    if (isAuthenticated) {
-                        return <Component {...props}/>
-                    } else {
-                        return <Redirect to="/signin"/>
-                    }
+        <Route 
+            {...rest} 
+            render={(props) => {
+                if (isAuthenticated) {
+                    return <Component {...props}/>
+                } else {
+                    return <Redirect to={{pathname:"/signin"}}/>
                 }
-            }/>
-        </Consumer>
+            }
+        }/>
     )
 }
 
