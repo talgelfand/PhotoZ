@@ -1,15 +1,16 @@
 import React from 'react';
-import NavBar from '../../components/navBar';
 import PostList from '../../components/postList';
+import DashboardLayout from '../../layouts/dashboardLayout';
 
 import './mainPage.scss';
 
 function MainPage() {
     return (
-        <div className="main">
-            <NavBar/>
-            <PostList/>
-        </div>
+        <DashboardLayout>
+            <div className="main">
+                <PostList/>
+            </div>
+        </DashboardLayout>
     )
 }
 
