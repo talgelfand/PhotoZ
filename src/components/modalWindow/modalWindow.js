@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { Button, Form, Input, InputGroup, Label} from 'reactstrap';
 import Modal from 'react-modal';
 
-import './modal.scss';
+import './modalWindow.scss';
 
 class ModalWindow extends Component {
 
