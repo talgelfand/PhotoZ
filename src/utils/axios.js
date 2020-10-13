@@ -1,6 +1,14 @@
 import {Component} from 'react';
 import axios from 'axios';
 
+const instance = axios.create({
+    baseURL: 'http://localhost:3000/',
+    timeout: 1000,
+    headers: {
+        'Header': 'foobar' 
+    }
+});
+
 class GetData extends Component {
 
     state = {
@@ -21,3 +29,4 @@ class GetData extends Component {
 }
 
 export default GetData;
+export {instance};
